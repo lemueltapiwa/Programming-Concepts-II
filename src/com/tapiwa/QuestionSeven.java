@@ -59,7 +59,7 @@ public class QuestionSeven {
     }
 
     public static void main(String[] args) {
-        int x = 0;
+        int count = 0;
         int menuChoice = -1;
         QuestionSeven[] pupils = new QuestionSeven[5];
         Scanner input = new Scanner(System.in);
@@ -72,7 +72,7 @@ public class QuestionSeven {
             menuChoice = input.nextInt();
 
             if (menuChoice==1){
-                if(x < 30) {
+                if(count < 5) {
                     System.out.println("ID Number:");
                     int id = input.nextInt();
                     System.out.println("First Name:");
@@ -92,17 +92,17 @@ public class QuestionSeven {
                     QuestionSeven pupil = new QuestionSeven(id, fname, sname, gender, grade,nok, nokp);
 
                     //Place in array
-                    pupils[x] = pupil;
+                    pupils[count] = pupil;
 
-                    //Increment x for next pupil placement
-                    x++;
+                    //Increment count for next pupil placement
+                    count++;
                 }
                 else {  //Not able to add new student
                     System.out.println("Can't add new pupil, pupils full");
                 }
             }
             else if (menuChoice==2) {
-                for (int i=0; i<x; i++) {
+                for (int i=0; i<count; i++) {
                     QuestionSeven pupil = pupils[i];
                     System.out.println(pupil.getIdNumber() + pupil.getFirstName() + pupil.getSurname() + pupil.getGender()
                             + pupil.getGrade() + pupil.getNextOfKeen() + pupil.getNextOfKeenPhone());
@@ -113,7 +113,7 @@ public class QuestionSeven {
                 Scanner in=new Scanner(System.in);
                 String searchTerm = in.nextLine();
 
-                QuestionSeven pupil = pupils[x];
+                QuestionSeven pupil = pupils[count];
                 if(searchTerm == pupil.getFirstName()){
                     System.out.println("Result found: "+pupil.getFirstName() + "" + pupil.getSurname());
                 }
