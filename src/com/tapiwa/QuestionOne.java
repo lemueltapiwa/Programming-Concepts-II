@@ -1,6 +1,6 @@
 package com.tapiwa;
 
-public class QuestionOne {
+public class QuestionOne_Zu19170_TapiwaChinyanga {
 
     //The main() function is the starting point for JVM to start execution of a Java program.
     public static void main(String args[]) //static method
