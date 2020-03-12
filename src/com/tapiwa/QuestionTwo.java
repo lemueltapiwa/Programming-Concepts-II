@@ -1,6 +1,6 @@
 package com.tapiwa;
 
-public class QuestionTwo {
+public class Q1_Zu19170_TapiwaChinyanga{
 
     public static void main(String args[])
     {
